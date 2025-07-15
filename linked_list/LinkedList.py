@@ -50,11 +50,34 @@ class Linkedlist:
     def removefirst(self):
         if self.isempty():
             print("Nothing to delete")
+            return
         elif self.currsize == 1:
             self.head = None
             self.tail = None
         else:
             self.head = self.head.next
+        self.currsize -= 1
+            
+    def removelast(self):
+        if self.isempty():
+            print("nothing to delete")
+            return
+        elif self.currsize == 1:
+            self.head = None
+            self.tail = None
+        else:
+            prev = None
+            curr = self.head
+            while(curr is not self.tail):
+                prev = curr
+                curr = curr.next
+            
+            prev.next = self.tail
+            self.tail = prev
+        self.currsize -= 1
+            
+                
+            
         
         
             

@@ -15,7 +15,7 @@ def main():
     ll.display()
     ll.removefirst()
     ll.display()
-    ll.removefirst()
+    ll.removelast()
     ll.display()
 
 if __name__ == "__main__":
