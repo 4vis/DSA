@@ -11,30 +11,35 @@ class Linkedlist:
     
     #isempty method for ease of use
     def isempty(self):
-        if self.head is None:
-            print("Empty Linkedlist!")
+        if self.currsize == 0:
             return True
-            
-            
-            
+        else:
+            return False
+      
     #displaying the linked list
     def display(self):
-        if self.isempty:
+        if self.isempty():
             print("Lock in bro")
         else:
             curr_node = self.head
             while curr_node:
-                print(curr_node.data, " -> ")
+                print(curr_node.data, end=" -> ")
                 curr_node = curr_node.next
+        print("\nll size: ",self.currsize)
 
     def addfirst(self,data):
         node = self.Node(data)
-        self.head = node
-        self.tail = node
+        if self.isempty():
+            self.head = node
+            self.tail = node
+        else:
+            tmpvar = self.head
+            self.head = node
+            self.head.next = tmpvar  
         self.currsize+=1
         
     def addlast(self, data):
-        if self.isempty:
+        if self.isempty():
             self.addfirst(data)
         else:
             node = self.Node(data)
