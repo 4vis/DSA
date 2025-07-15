@@ -13,6 +13,10 @@ def main():
     ll.display()
     ll.addlast(42)
     ll.display()
+    ll.removefirst()
+    ll.display()
+    ll.removefirst()
+    ll.display()
 
 if __name__ == "__main__":
     main()

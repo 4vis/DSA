@@ -46,6 +46,15 @@ class Linkedlist:
             self.tail.next = node
             self.tail = node
             self.currsize+=1
+            
+    def removefirst(self):
+        if self.isempty():
+            print("Nothing to delete")
+        elif self.currsize == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
         
         
             
